@@ -1,0 +1,23 @@
+import random
+
+letters = "abcdefghijklmnopqrstuvwxyz"
+numbers = "0123456789"
+special = "!@#$%^&*"
+all_char = letters + numbers + special
+Type = input("letters/numbers/special/all: ") 
+digit = input("Enter the lenth of your password: ")
+password = ""
+if Type == "letters":
+    for i in range(int(digit)):
+        password = password + random.choice(letters)
+elif Type == "numbers":
+    for i in range(int(digit)):
+        password = password + random.choice(numbers)
+elif Type == "special":
+    for i in range(int(digit)):
+        password = password + random.choice(special)
+elif Type == "all":
+    for i in range(int(digit)):
+        password = password + random.choice(all_char)
+
+print(password)
